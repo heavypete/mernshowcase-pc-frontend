@@ -1,5 +1,11 @@
+import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./App.scss";
+
+import Nav from "./Components/Nav.js";
+import PageWelcome from "./Pages/PageWelcome.js";
+import PageRegister from "./Pages/PageRegister.js";
+import PageLogin from "./Pages/PageLogin.js";
 
 function App() {
   const [username, setUsername] = useState("");
@@ -199,6 +205,13 @@ function App() {
       {currentUser.username && (
         <div>
           <div className="title">MERN Showcase App</div>
+          <Nav>
+            <Routes>
+              <Route path="/" element={<PageWelcome />} />
+              <Route path="register" element={<PageRegister />} />
+              <Route path="login" element={<PageLogin />} />
+            </Routes>
+          </Nav>
 
           {currentUserIsInGroup("loggedInUsers") && (
             <h2>

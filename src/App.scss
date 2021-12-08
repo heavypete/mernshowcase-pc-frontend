@@ -9,7 +9,29 @@ body {
     font-size: 1.6rem;
     background-color: rgb(30, 4, 131);
     padding: 25px;
+    nav {
+      background-color: #333;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+      width: 50vw;
+      ul {
+        display: flex;
 
+        margin: 0;
+        li {
+          list-style: none;
+          margin: 0 5% 0 0;
+          a {
+            color: #ccc;
+            text-decoration: none;
+          }
+          .active {
+            color: rgb(255, 255, 161);
+          }
+        }
+      }
+    }
     .title {
       //text-align: center;
       color: #ffff;
