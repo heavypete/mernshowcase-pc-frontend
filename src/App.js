@@ -198,7 +198,8 @@ function App() {
     <div className="App">
       {currentUser.username && (
         <div>
-          <h1>MERN Showcase App</h1>
+          <div className="title">MERN Showcase App</div>
+
           {currentUserIsInGroup("loggedInUsers") && (
             <h2>
               Current User: {currentUser.firstName} {currentUser.lastName}
@@ -311,7 +312,7 @@ function App() {
           )}
         </div>
       )}
-      <p>=====================REGISTER===========================</p>
+      <p className="legend">REGISTER</p>
       <form>
         <fieldset>
           <legend>Register</legend>
@@ -326,7 +327,7 @@ function App() {
             />
           </div>
           <div className="row">
-            <label htmlFor="secondname"></label>
+            <label htmlFor="secondname">Last Name</label>
             <input
               type="text"
               id="secondNameRegister"
@@ -380,7 +381,7 @@ function App() {
           <div className="buttonRow">
             <button onClick={handleRegisterButton}>Register</button>
             <div className="buttonRow">
-              <button>Reset</button>
+              <button className="button">Reset</button>
             </div>
           </div>
         </fieldset>
