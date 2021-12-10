@@ -14,7 +14,8 @@ body {
       border-radius: 5px;
       padding: 10px;
       margin: 10px;
-      width: 50vw;
+      width: 40%;
+
       ul {
         display: flex;
 
@@ -79,6 +80,7 @@ body {
 
     form {
       width: 600px;
+      margin-top: 20px;
       .note.invalid {
         color: red;
       }

@@ -3,18 +3,24 @@ import { createContext, useState } from "react";
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const [siteStatus, setSiteStatus] = useState("development");
+  const [currentUser, setCurrentUser] = useState({});
 
-  const toggleStatus = () => {
-    setSiteStatus(siteStatus === "development" ? "live" : "development");
+  const currentUserIsInGroup = (accessGroup) => {
+    const accessGroupArray = currentUser.accessGroups
+      .split(",")
+      .map((m) => m.trim());
+    return accessGroupArray.includes(accessGroup);
   };
+
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
   return (
     <AppContext.Provider
       value={{
-        siteStatus,
-        setSiteStatus,
-        toggleStatus,
+        currentUser,
+        setCurrentUser,
+        currentUserIsInGroup,
+        backendUrl,
       }}
     >
       {children}
