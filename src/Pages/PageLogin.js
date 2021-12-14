@@ -4,7 +4,7 @@ import AppContext from "../AppContext";
 const PageLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [currentUser, setCurrentUser] = useState({});
+  const { setCurrentUser, currentUserIsInGroup } = useContext(AppContext);
 
   const [userNameRegister, setUserNameRegister] = useState("");
   const [firstNameRegister, setFirstNameRegister] = useState("");

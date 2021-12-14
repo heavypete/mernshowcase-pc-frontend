@@ -6,13 +6,7 @@ import Nav from "./Components/Nav.js";
 import PageWelcome from "./Pages/PageWelcome.js";
 import PageRegister from "./Pages/PageRegister.js";
 import PageLogin from "./Pages/PageLogin.js";
-import {
-  BrowserRouter as div,
-  Route,
-  Routes,
-  Link,
-  NavLink,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes, Link, NavLink } from "react-router-dom";
 
 function App() {
   const [username, setUsername] = useState("");
@@ -65,7 +59,8 @@ function App() {
           //   console.log({ newUser });
           //   return newUser;
           // });
-          setCurrentUser(data);
+          console.log(data);
+          setCurrentUser((prev) => ({ ...prev, ...data }));
         }
         loadNotYetApprovedUsers();
       } catch (err) {
@@ -184,7 +179,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="title">Feel the MERN!</div>
+      [ {currentUser.username}]<div className="title">Feel the MERN!</div>
       <Nav></Nav>
       <Routes>
         <Route path="/" exact element={<PageWelcome />} />

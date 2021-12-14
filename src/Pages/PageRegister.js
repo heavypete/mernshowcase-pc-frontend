@@ -86,7 +86,7 @@ const PageRegister = () => {
               id="firstNameRegister"
               value={firstNameRegister}
               onChange={handleFirstNameRegister}
-              placeholder="Enter your firstname"
+              placeholder="Enter your first name"
             />
           </div>
           <div className="row">
