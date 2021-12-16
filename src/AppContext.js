@@ -6,6 +6,7 @@ export const AppProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState({});
 
   const currentUserIsInGroup = (accessGroup) => {
+    console.log(currentUser);
     const accessGroupArray = currentUser.accessGroups
       .split(",")
       .map((m) => m.trim());

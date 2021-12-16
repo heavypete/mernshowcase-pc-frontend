@@ -6,12 +6,6 @@ const PageLogin = () => {
   const [password, setPassword] = useState("");
   const { setCurrentUser, currentUserIsInGroup } = useContext(AppContext);
 
-  const [userNameRegister, setUserNameRegister] = useState("");
-  const [firstNameRegister, setFirstNameRegister] = useState("");
-  const [secondNameRegister, setSecondNameRegister] = useState("");
-  const [emailRegister, setEmailRegister] = useState("");
-  const [passwordRegister1, setPasswordRegister1] = useState("");
-  const [passwordRegister2, setPasswordRegister2] = useState("");
   const handleUsername = (e) => {
     const _username = e.target.value;
     setUsername(_username);
