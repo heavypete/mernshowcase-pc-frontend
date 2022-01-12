@@ -46,7 +46,7 @@ function App() {
     <div className="App">
       {currentUser.username && (
         <>
-          [ {currentUser.username} 'blue']
+          {/* [ {currentUser.username} 'blue'] */}
           <div className="title">Feel the MERN!</div>
           {currentUserIsInGroup("loggedInUsers") && (
             <h2>
